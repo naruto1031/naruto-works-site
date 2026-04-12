@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteMeta, hero, services, career, contact, footer } from '../data/site';
+---
+
+<BaseLayout title={siteMeta.title} description={siteMeta.description}>
+	<header class="wrap hero">
+		<p class="hero__sub">{hero.subline}</p>
+		<h1 class="hero__trade">{hero.tradeName}</h1>
+		<p class="hero__tagline">{hero.tagline}</p>
+	</header>
+	<main id="main">
+		<section class="section wrap" id="services" aria-labelledby="services-heading">
+			<h2 class="section__title" id="services-heading">{services.heading}</h2>
+			<ul class="list">
+				{services.items.map((item) => <li>{item}</li>)}
+			</ul>
+		</section>
+		<section class="section wrap" id="career" aria-labelledby="career-heading">
+			<h2 class="section__title" id="career-heading">{career.heading}</h2>
+			<div class="card">
+				<p>{career.intro}</p>
+				<ul class="list" style="margin-top: var(--space-3); color: var(--text);">
+					{career.highlights.map((h) => <li>{h}</li>)}
+				</ul>
+				<p style="margin-top: var(--space-3); color: var(--text); font-size: var(--text-sm);">
+					{career.skillsLabel}
+				</p>
+				<ul class="pills">
+					{career.skills.map((s) => <li>{s}</li>)}
+				</ul>
+			</div>
+		</section>
+		<section class="section wrap" id="contact" aria-labelledby="contact-heading">
+			<h2 class="section__title" id="contact-heading">{contact.heading}</h2>
+			<p class="hero__tagline" style="margin: 0; font-size: var(--text-base);">{contact.intro}</p>
+			<div class="links">
+				{
+					contact.links.map((link) => (
+						<a
+							href={link.href}
+							rel={link.external ? 'noopener noreferrer' : undefined}
+							target={link.external ? '_blank' : undefined}
+						>
+							{link.label}
+						</a>
+					))
+				}
+			</div>
+			<p class="note">{contact.note}</p>
+		</section>
+	</main>
+	<footer class="site-footer wrap">
+		<div class="site-footer__inner">
+			<span>{footer.tradeName}</span>
+			<span>{footer.legal}</span>
+		</div>
+	</footer>
+</BaseLayout>

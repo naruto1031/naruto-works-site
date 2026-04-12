@@ -1,0 +1,223 @@
+:root {
+	--bg: #0f0f10;
+	--bg-elevated: #161618;
+	--text: #e8e6e3;
+	--text-muted: #9a9691;
+	--border: rgba(232, 230, 227, 0.12);
+	--accent: #c4a574;
+	--accent-muted: rgba(196, 165, 116, 0.35);
+	--space-1: 8px;
+	--space-2: 16px;
+	--space-3: 24px;
+	--space-4: 32px;
+	--space-5: 48px;
+	--space-6: 64px;
+	--space-7: 96px;
+	--max-width: 720px;
+	--font-sans: 'IBM Plex Sans', 'Noto Sans JP', system-ui, sans-serif;
+	--font-jp: 'Noto Sans JP', 'IBM Plex Sans', system-ui, sans-serif;
+	--text-xs: 0.8125rem;
+	--text-sm: 0.9375rem;
+	--text-base: 1.0625rem;
+	--text-lg: 1.25rem;
+	--text-xl: clamp(1.5rem, 3vw, 2rem);
+	--text-hero: clamp(2.25rem, 5vw, 3.25rem);
+	--leading: 1.75;
+	--leading-tight: 1.35;
+	--tracking-wide: 0.08em;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: var(--font-jp);
+	font-size: var(--text-base);
+	line-height: var(--leading);
+	color: var(--text);
+	background: var(--bg);
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-sans);
+	font-weight: 500;
+	letter-spacing: var(--tracking-wide);
+	line-height: var(--leading-tight);
+	color: var(--text);
+}
+
+a {
+	color: var(--accent);
+	text-decoration-color: var(--accent-muted);
+	text-underline-offset: 0.2em;
+	transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+a:hover {
+	color: #d4b98a;
+	text-decoration-color: rgba(212, 185, 138, 0.6);
+}
+
+:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+}
+
+.skip-link {
+	position: absolute;
+	left: var(--space-2);
+	top: var(--space-2);
+	padding: var(--space-1) var(--space-2);
+	background: var(--bg-elevated);
+	color: var(--text);
+	border: 1px solid var(--border);
+	border-radius: 2px;
+	z-index: 10;
+	transform: translateY(-200%);
+	transition: transform 0.2s ease;
+}
+
+.skip-link:focus-visible {
+	transform: translateY(0);
+}
+
+.wrap {
+	width: min(100% - var(--space-4) * 2, var(--max-width));
+	margin-inline: auto;
+}
+
+.section {
+	padding-block: var(--space-6);
+	border-top: 1px solid var(--border);
+}
+
+.section:first-of-type {
+	border-top: none;
+}
+
+.section__title {
+	margin: 0 0 var(--space-3);
+	font-size: var(--text-xs);
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	color: var(--text-muted);
+}
+
+.hero {
+	padding-block: var(--space-7) var(--space-5);
+}
+
+.hero__trade {
+	margin: 0;
+	font-size: var(--text-hero);
+	font-weight: 500;
+	letter-spacing: 0.06em;
+}
+
+.hero__tagline {
+	margin: var(--space-3) 0 0;
+	font-size: var(--text-lg);
+	color: var(--text-muted);
+	font-weight: 400;
+	letter-spacing: 0.04em;
+}
+
+.hero__sub {
+	margin: var(--space-2) 0 0;
+	font-size: var(--text-sm);
+	color: var(--text-muted);
+}
+
+.list {
+	margin: 0;
+	padding-left: 1.15em;
+	color: var(--text-muted);
+}
+
+.list li + li {
+	margin-top: var(--space-1);
+}
+
+.card {
+	background: var(--bg-elevated);
+	border: 1px solid var(--border);
+	border-radius: 2px;
+	padding: var(--space-3) var(--space-4);
+}
+
+.card p {
+	margin: 0;
+	color: var(--text-muted);
+}
+
+.card p + p {
+	margin-top: var(--space-2);
+}
+
+.pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-1);
+	margin: var(--space-3) 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.pills li {
+	font-size: var(--text-xs);
+	letter-spacing: 0.04em;
+	padding: 6px 12px;
+	border: 1px solid var(--border);
+	border-radius: 999px;
+	color: var(--text-muted);
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-2);
+	margin: var(--space-3) 0 0;
+}
+
+.links a {
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
+	font-size: var(--text-base);
+}
+
+.note {
+	margin: var(--space-3) 0 0;
+	font-size: var(--text-xs);
+	color: var(--text-muted);
+	line-height: 1.6;
+}
+
+.site-footer {
+	padding-block: var(--space-5);
+	border-top: 1px solid var(--border);
+}
+
+.site-footer__inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: var(--space-2);
+	font-size: var(--text-xs);
+	color: var(--text-muted);
+	letter-spacing: 0.04em;
+}
