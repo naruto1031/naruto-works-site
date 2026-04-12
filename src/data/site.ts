@@ -102,5 +102,6 @@ export const contact = {
 } as const;
 
 export const footer = {
-	tradeName: 'NARUTO WORKS',
+	/** 表示用（請求・契約と揃える） */
+	operator: '屋号：NARUTO WORKS　氏名：近藤 成人',
 } as const;
