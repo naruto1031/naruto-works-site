@@ -43,8 +43,8 @@ export const career = {
 		},
 		{
 			period: '2023年3月〜2024年2月',
-			title: '大手向け Web システムの受託開発',
-			body: 'Next.js（App / Pages Router）・SvelteKit、GraphQL、NestJS、gRPC。Atomic Design やコンテナ／プレゼンテーショナル分離など、フロント設計もリード。',
+			title: '社内Webシステムの開発',
+			body: '社内Webシステムの開発において、Next.js（App / Pages Router）・SvelteKit、GraphQL、NestJS、gRPC を使用。Atomic Design やコンテナ／プレゼンテーショナル分離など、フロント設計もリード。',
 		},
 		{
 			period: '2022年8月〜2023年4月',
