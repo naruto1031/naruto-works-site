@@ -62,7 +62,6 @@ export const career = {
 		'バックエンド（Kotlin / Node 系）とフロント（React）の横断',
 		'インフラ寄り（Docker、GCP、Terraform）まで一貫して関与できる',
 	],
-	skillsLabel: '扱いの例（スキルシートより抜粋）',
 	skills: [
 		'TypeScript',
 		'Kotlin',
