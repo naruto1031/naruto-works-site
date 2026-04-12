@@ -28,6 +28,8 @@ GitHub Actions（`.github/workflows/deploy.yml`）が `main` ブランチへの�
 
 初回はリポジトリの **Settings → Pages → Build and deployment** でソースを **GitHub Actions** に設定してください。
 
+**注意:** 「Deploy from a branch」（`build_type: legacy`）のままだと、GitHub が **Jekyll**（`jekyll-build-pages`）でリポジトリ全体をビルドしようとします。Astro の `---` が YAML と衝突して失敗するため、必ず **GitHub Actions** に切り替えてください（このリポジトリの `deploy.yml` が `dist` を公開します）。
+
 ### `site` と `base` の扱い
 
 ビルド時に次の環境変数で上書きします（ワークフロー内で自動設定）。
