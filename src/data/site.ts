@@ -53,8 +53,8 @@ export const career = {
 		},
 		{
 			period: '2022年5月〜2023年2月',
-			title: 'SaaS のサーバサイド・フロント開発',
-			body: 'React、TypeScript、Kotlin による Web API と画面の実装。',
+			title: 'SaaS 事業における Web 開発',
+			body: 'JavaScript、HTML、Sass、jQuery、MongoDB、Linux、AWS を用いた開発。HTML/CSS・jQuery による画面実装と MongoDB を含む Web 周辺の実装。',
 		},
 	],
 	highlights: [
