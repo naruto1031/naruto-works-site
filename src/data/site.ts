@@ -33,12 +33,12 @@ export const career = {
 	timeline: [
 		{
 			period: '2024年8月〜現在',
-			title: '請求ドメイン SaaS の UI・基盤・サーバ開発',
+			title: '請求SaaSの開発（UI〜サーバ）',
 			body: 'TypeScript / React / Kotlin。UI 基盤（Ark UI / Panda CSS）、MCP 連携、フルスタック寄りの機能開発。2025年春以降はエンジニアリング組織での Web 周辺開発に比重。',
 		},
 		{
 			period: '2024年3月〜2025年3月',
-			title: '請求プロダクトのドメイン駆動フルスタック',
+			title: '請求プロダクトの設計とフルスタック実装',
 			body: 'TypeScript / Kotlin、Express / Ktor、PostgreSQL、GCP。DDD・クリーンアーキテクチャに沿った BE/FE 実装と Terraform による IaC。',
 		},
 		{
