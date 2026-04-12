@@ -99,7 +99,6 @@ export const contact = {
 			external: true,
 		},
 	],
-	note: 'YOUTRUST には公開プロフィール情報が含まれる場合があります。',
 } as const;
 
 export const footer = {
