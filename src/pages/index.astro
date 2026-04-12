@@ -5,7 +5,6 @@ import { siteMeta, hero, services, career, contact, footer } from '../data/site'
 
 <BaseLayout title={siteMeta.title} description={siteMeta.description}>
 	<header class="wrap hero">
-		<p class="hero__sub">{hero.subline}</p>
 		<h1 class="hero__trade">{hero.tradeName}</h1>
 		<p class="hero__tagline">{hero.tagline}</p>
 	</header>
@@ -20,7 +19,19 @@ import { siteMeta, hero, services, career, contact, footer } from '../data/site'
 			<h2 class="section__title" id="career-heading">{career.heading}</h2>
 			<div class="card">
 				<p>{career.intro}</p>
-				<ul class="list" style="margin-top: var(--space-3); color: var(--text);">
+				<p class="timeline-heading">{career.timelineHeading}</p>
+				<ol class="timeline">
+					{
+						career.timeline.map((entry) => (
+							<li>
+								<span class="timeline__period">{entry.period}</span>
+								<span class="timeline__title">{entry.title}</span>
+								<span class="timeline__body">{entry.body}</span>
+							</li>
+						))
+					}
+				</ol>
+				<ul class="list list--emphasis">
 					{career.highlights.map((h) => <li>{h}</li>)}
 				</ul>
 				<p style="margin-top: var(--space-3); color: var(--text); font-size: var(--text-sm);">
@@ -53,7 +64,6 @@ import { siteMeta, hero, services, career, contact, footer } from '../data/site'
 	<footer class="site-footer wrap">
 		<div class="site-footer__inner">
 			<span>{footer.tradeName}</span>
-			<span>{footer.legal}</span>
 		</div>
 	</footer>
 </BaseLayout>

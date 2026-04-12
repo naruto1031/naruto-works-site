@@ -3,14 +3,13 @@
 export const siteMeta = {
 	title: 'NARUTO WORKS',
 	description:
-		'屋号 NARUTO WORKS。Web サービスの企画・開発・運営、マーケティング支援、コンサルティング、アフィリエイトを扱う個人事業です。',
+		'屋号 NARUTO WORKS。Web サービスの企画・開発・運営、マーケティング支援、コンサルティング、アフィリエイトを扱っています。',
 	lang: 'ja',
 } as const;
 
 export const hero = {
 	tradeName: 'NARUTO WORKS',
 	tagline: 'Web を軸に、企画から運用まで。',
-	subline: '個人事業（開業届提出済）',
 } as const;
 
 /** 開業届の事業概要に沿った要約 */
@@ -25,22 +24,58 @@ export const services = {
 	],
 } as const;
 
-/** 会社名は出さず、職種・領域で表現 */
+/** スキルシート由来。社名は掲載せず、期間・役割・技術で記載 */
 export const career = {
 	heading: '経歴・強み',
 	intro:
-		'B2B SaaS を扱う事業会社で、バックエンド中心のソフトウェアエンジニアとして従事しています。個人事業として、開発全般と周辺の支援にも対応します。',
-	highlights: [
-		'設計・実装・運用を一気通貫で捉える',
-		'ドメインと非機能要件のバランスを重視',
-		'関係者と合意形成しながら進める',
+		'B2B SaaS（請求・支出管理などのドメイン）や受託開発を中心に、バックエンドからフロント、UI 基盤まで幅広く担当してきました。設計は DDD やクリーンアーキテクチャを意識しつつ、PdM・デザイナーとも協働してプロダクトに落とし込むことに注力しています。',
+	timelineHeading: '主な担当歴（社名は非掲載）',
+	timeline: [
+		{
+			period: '2024年8月〜現在',
+			title: 'B2B SaaS（請求・支出管理）における UI からサーバまで',
+			body: 'TypeScript / React / Kotlin。UI 基盤（Ark UI / Panda CSS）、MCP 連携、フルスタック寄りの機能開発。2025年春以降はエンジニアリング組織での Web 周辺開発に比重。',
+		},
+		{
+			period: '2024年3月〜2025年3月',
+			title: '同一ドメインでのフルスタック開発',
+			body: 'TypeScript / Kotlin、Express / Ktor、PostgreSQL、GCP。DDD・クリーンアーキテクチャに沿った BE/FE 実装と Terraform による IaC。',
+		},
+		{
+			period: '2023年3月〜2024年2月',
+			title: '大手向け Web システムの受託開発',
+			body: 'Next.js（App / Pages Router）・SvelteKit、GraphQL、NestJS、gRPC。Atomic Design やコンテナ／プレゼンテーショナル分離など、フロント設計もリード。',
+		},
+		{
+			period: '2022年8月〜2023年4月',
+			title: 'Web サービスの保守・機能追加',
+			body: 'PHP（CakePHP）、jQuery、MySQL。レガシー改善と MVC ベースの機能開発。',
+		},
+		{
+			period: '2022年5月〜2023年2月',
+			title: 'SaaS のサーバサイド・フロント開発',
+			body: 'React、TypeScript、Kotlin による Web API と画面の実装。',
+		},
 	],
-	skillsLabel: '扱いの例',
+	highlights: [
+		'ドメイン駆動設計・クリーンアーキテクチャに基づく設計と実装',
+		'バックエンド（Kotlin / Node 系）とフロント（React）の横断',
+		'インフラ寄り（Docker、GCP、Terraform）まで一貫して関与できる',
+	],
+	skillsLabel: '扱いの例（スキルシートより抜粋）',
 	skills: [
-		'TypeScript / Node.js',
-		'API・バックエンド設計',
-		'クラウド上の運用',
-		'ドキュメント・レビュー',
+		'TypeScript',
+		'Kotlin',
+		'React',
+		'Next.js',
+		'SvelteKit',
+		'SQL（PostgreSQL / MySQL）',
+		'GraphQL / gRPC',
+		'NestJS / Express / Ktor',
+		'GCP / AWS',
+		'Docker / Terraform',
+		'Git / GitHub / GitLab',
+		'PHP（CakePHP）',
 	],
 } as const;
 
@@ -69,5 +104,4 @@ export const contact = {
 
 export const footer = {
 	tradeName: 'NARUTO WORKS',
-	legal: '個人事業主',
 } as const;
