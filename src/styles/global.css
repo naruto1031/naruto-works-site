@@ -233,6 +233,44 @@ a:hover {
 	margin-top: var(--space-2);
 }
 
+.pricing__intro {
+	margin: 0;
+	color: var(--text);
+}
+
+.pricing__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: var(--space-2);
+	margin: var(--space-3) 0 0;
+}
+
+.pricing__item {
+	padding: var(--space-2);
+	border: 1px solid var(--border);
+	background: rgba(255, 255, 255, 0.01);
+}
+
+.pricing__item dt {
+	font-size: var(--text-xs);
+	color: var(--text-muted);
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.pricing__item dd {
+	margin: var(--space-1) 0 0;
+	font-size: var(--text-sm);
+	color: var(--text);
+	line-height: 1.6;
+}
+
+.pricing__note {
+	margin-top: var(--space-3);
+	font-size: var(--text-sm);
+	color: var(--text-muted);
+}
+
 .pills {
 	display: flex;
 	flex-wrap: wrap;

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { siteMeta, hero, services, career, contact, footer } from '../data/site';
+import { siteMeta, hero, services, pricing, career, contact, footer } from '../data/site';
 ---
 
 <BaseLayout title={siteMeta.title} description={siteMeta.description}>
@@ -14,6 +14,23 @@ import { siteMeta, hero, services, career, contact, footer } from '../data/site'
 			<ul class="list">
 				{services.items.map((item) => <li>{item}</li>)}
 			</ul>
+		</section>
+		<section class="section wrap" id="pricing" aria-labelledby="pricing-heading">
+			<h2 class="section__title" id="pricing-heading">{pricing.heading}</h2>
+			<div class="card pricing">
+				<p class="pricing__intro">{pricing.intro}</p>
+				<dl class="pricing__grid">
+					{
+						pricing.plans.map((plan) => (
+							<div class="pricing__item">
+								<dt>{plan.label}</dt>
+								<dd>{plan.value}</dd>
+							</div>
+						))
+					}
+				</dl>
+				<p class="pricing__note">{pricing.note}</p>
+			</div>
 		</section>
 		<section class="section wrap" id="career" aria-labelledby="career-heading">
 			<h2 class="section__title" id="career-heading">{career.heading}</h2>
